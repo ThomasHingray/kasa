@@ -1,0 +1,29 @@
+.error{
+    text-align: center;
+
+    * {
+        margin-bottom:140px;
+    }
+    h1{
+        font-size:288px;
+        color:#FF6060;
+        margin-top: 100px;
+    }
+
+    h2 {
+        color:#FF6060;
+        font-size: 36px;
+        font-weight: medium;
+    }
+
+    .indexLink {
+        color:#000;
+        text-decoration: none;
+        
+        font-size:18px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
