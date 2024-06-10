@@ -5,6 +5,7 @@ function Slideshow ({pictures}) {
     
     const [nextPicture, setNextPicture] = useState(0)
 
+    // Utiliser modulo pour revenir au début ou à la fin aux extrémités du carroussel
     const handleNext = () => {
         setNextPicture((next) => (next + 1) % pictures.length);
     };
@@ -13,6 +14,7 @@ function Slideshow ({pictures}) {
         setNextPicture((next) => (next - 1 + pictures.length) % pictures.length);
     };
     
+    // Le carroussel étant prévu pour accueil 10 images maximum, on peut déplacer le slider de -("numéro de l'image"*10) %
     useEffect(() => {
         const slider = document.querySelector(".slider")
         slider.setAttribute("style", `transform:translatex(-${nextPicture}0%`)

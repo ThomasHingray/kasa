@@ -1,6 +1,8 @@
 
 function Rating ({rating}) {
-    
+
+
+    // On crée un tableau de 5 étoiles, et on en colore le nombre demandé en rouge
     const parsedRating = parseInt(rating)
 
     return (

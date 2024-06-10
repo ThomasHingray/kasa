@@ -11,6 +11,8 @@ function Lodging () {
     const [pictures, setPictures] = useState([])
     const navigate = useNavigate()
 
+    // En cas de cible éronnée, navigate renvoie vers la page d'erreur
+
     useEffect(() => {
         const targetElement = data.find((element) => element.id === id);
         if (targetElement) {

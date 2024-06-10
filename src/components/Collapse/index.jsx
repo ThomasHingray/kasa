@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 
 function Collapse ({title, id, content}) {
     const [isCollapse, setIsCollapse] = useState("")
-    
+
+
+    // Au click, on toggle la visibilité du contenu des collapse 
     useEffect (() => {
         const collapseContent = document.querySelectorAll(".collapseContent")
         
@@ -16,6 +18,7 @@ function Collapse ({title, id, content}) {
             }
     }, [isCollapse])
 
+    // Au click, on toggle la rotation de la flèche
     useEffect (() => {
         const collapseButton = document.querySelectorAll(".fa-angle-up")
 
