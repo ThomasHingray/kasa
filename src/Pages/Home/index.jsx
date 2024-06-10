@@ -10,7 +10,7 @@ function Home () {
             <div className= "bannerContainer">
                 <Banner image={BannerImage}/>
                 <div className= "title">
-                    <h1>Chez vous, partout et ailleurs</h1>
+                    <h1><span>Chez vous, </span>partout et ailleurs</h1>
                 </div>
             </div>
             <div className="cardContainer">

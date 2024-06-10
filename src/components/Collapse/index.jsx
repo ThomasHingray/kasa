@@ -1,7 +1,6 @@
-import aboutList from '../../assets/aboutList.json'
 import { useEffect, useState } from 'react'
 
-function Collapse () {
+function Collapse ({title, id, content}) {
     const [isCollapse, setIsCollapse] = useState("")
     
     useEffect (() => {
@@ -32,20 +31,24 @@ function Collapse () {
     }, [isCollapse])
 
     return (
-        <div className='collapseWrapper'>
-        {aboutList.map((element) => (
-            <div className="collapseElement" key={element.title}>
+        <div className='collapseWrapper' >
+        
+            <div className="collapseElement">
                 <div className="collapseHeader">
-                    {element.title}
-                    <i className="fa-solid fa-angle-up" id={element.id}
+                    {title}
+                    <i className="fa-solid fa-angle-up" id={id}
                         onClick = {(e) => setIsCollapse(e.target.id)}>
                     </i>
                 </div>
                 <div className="collapseContent inactive">
-                    {element.content}
+                    {Array.isArray(content) ? (
+                        content.map((element, index) => (
+                            <p key={index}>{element}</p>
+                        ))) : (
+                        <p>{content}</p>
+                    )}
                 </div>
             </div>
-        ))}
         </div>
     )
 }

@@ -7,16 +7,287 @@
 @import './components/card.scss';
 @import './components/collapse.scss';
 @import './components/slideshow.scss';
-
-
+@import './components/information.scss';
+@import './pages/lodging.scss';
 
 * {
     margin:0;
     padding:0;
 }
 
-body {
+main, header {
     max-width:1440px;
-    margin:0 100px ;
+    margin:0 100px;
     font-family:'Montserrat', sans-serif;
+}
+
+
+@media all and (min-width:1440px){
+    body {
+        display:flex;
+        justify-content: center;
+    }
+}
+
+
+@media all and (max-width:1000px) {
+    img.bannerImage {
+        height:111px;
+    }
+
+    header .navLink{
+        font-size:18px;
+        margin-left:26px;
+    }
+
+    .home{
+        .title{
+            h1{
+                font-size: 24px;
+            }
+        }
+
+        .cardTitle{
+            h2{
+                font-size:18px;
+            }
+        }
+    }
+    
+    .lodgeInformation {
+        h1{
+            font-size:20px;
+        }
+        
+        h2{
+            font-size:14px;
+        }
+
+        ul{
+            flex-direction: column;
+            li{
+                font-size:12px;
+                margin-bottom:5px;
+                max-width: 50%;
+            }
+            
+        }
+    }
+
+    .lodgingCollapse{
+        flex-direction: column;  
+        margin-top:15px;
+        
+        .collapseWrapper{
+            width:95%;
+        }
+    }
+
+    .collapseHeader{
+        font-size:18px;
+        margin:0;
+    }
+
+    .collapseContent{
+        font-size:14px;
+    }
+
+    .fa-angle-up {
+        font-size:24px;
+    }
+
+    .sliderContainer {
+        height:255px;
+
+        i{
+            font-size:24px;
+            top:calc(50% - 12px)
+        }
+    }
+
+    .slider{
+        height:255px;
+    }
+    
+    main, header {
+        margin: 0 20px;
+    }
+
+    .error {
+
+        h1{
+            font-size:188px;
+        }
+    }
+
+}
+
+@media all and (max-width:490px) {
+
+    img.bannerImage{
+        border-radius: 10px;
+    }
+    
+    .home {
+
+        .title {
+            justify-content: left;
+            text-align: left;
+            padding-left:16px;
+        }
+
+        span {
+            display:block
+        }
+
+        .cardContainer {
+        background:none;
+        display:flex;
+        flex-direction: column;
+        padding:0;
+        }
+
+        .card{
+            width:100%;
+        }
+    }
+
+    header {
+        padding:20px;
+
+        img {
+            width:145px;
+        }
+
+        nav{
+            text-align: right;
+        }
+
+        .navLink {
+            display:inline-block;
+            font-size:14px;
+        }
+    }   
+
+    .sliderContainer{
+
+        p{
+            display:none;
+        }
+    }
+
+    .information{
+        flex-direction: column;
+
+        .lodgeInformation {
+            width:100%;
+
+            h1 {
+                font-size:18px;
+            }
+
+            h2 {
+                margin-top:5px;
+            }
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+                width:100%;
+
+                li{
+                    width:20%;
+                    font-size: 10px;
+                    padding:3px 5px;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .hostInformation {
+            display:flex;
+            width:100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+            .host{
+
+                h3{
+                    font-size:12px;
+                }
+                
+                img{
+                    width:32px;
+                    height:32px;
+                }
+            }
+
+            .rating{
+        
+                .fa-star{
+                    font-size:18px;
+                    margin-top:0;
+                }
+            }
+        }
+    }
+
+    .lodgingCollapse{
+        margin:0;
+    }
+
+    .collapseWrapper, 
+    .lodgingCollapse.collapseWrapper{
+        width:90%;
+        margin-bottom:0
+    }
+    .fa-angle-up, 
+    .lodgingCollapse.fa-angle-up{
+        font-size: 16px;
+    }
+
+    .collapseHeader, 
+    .lodgingCollapse.collapseHeader{
+        font-size: 13px;
+    }
+
+    .collapseContent, 
+    .lodgingCollapse.collapseContent{
+        font-size: 12px;
+    }
+
+    .about .collapseWrapper{
+        margin-top:20px;
+    }
+
+    footer{
+        margin-top:20px;
+        padding-bottom:60px;
+
+        p{
+            width:120px;
+            text-align: center;
+        }
+    }
+
+    .error{
+
+        *{
+            margin-bottom:113px;
+        }
+
+        h1{
+            font-size: 96px;
+        }
+
+        h2{
+            font-size:18px;
+        }
+
+        .indexLink{
+            font-size: 14px;
+        }
+    }
 }
